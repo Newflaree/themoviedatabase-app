@@ -11,8 +11,8 @@ import { MoviesService } from './services/movies.service';
 export class AppComponent {
   constructor( private moviesService: MoviesService ) {
     moviesService.getMovies()  
-    .subscribe( ( resp: any ) => {
-      console.log( resp );
+    .subscribe( resp => {
+      console.log( resp.results );
     })
   }
 }
