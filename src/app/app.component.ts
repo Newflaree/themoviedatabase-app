@@ -9,10 +9,5 @@ import { MoviesService } from './services/movies.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor( private moviesService: MoviesService ) {
-    moviesService.getMovies()  
-    .subscribe( resp => {
-      console.log( resp.results );
-    })
-  }
+  constructor() {  }
 }

@@ -1,0 +1,50 @@
+
+
+<!-- Grid Section -->
+<section class='grid-section sec-padding mt-5' id='grid-sec'>
+  <div class='container'>
+
+    <div class='row'>
+      <div class='section-title'>
+        <h2>Revisa la <span>cartelera</span></h2>
+      </div>
+    </div>
+
+    <div class='row'>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+  
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+    
+          <!-- Slides -->
+          <div class="swiper-slide" 
+               *ngFor="let movie of movies"
+               [ngStyle]="{
+                'background-size': 'cover',
+                'background-image': 'url( http://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')'
+               }">
+
+            <div class='movie-description'>
+              <h3>{{ movie.title }}</h3>
+              <p>
+                {{ movie.overview | slice:0:230 }}...
+              </p>
+            </div> 
+          </div>
+  
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+  
+        <!-- If we need navigation buttons -->
+        <div (click)='onPrev()' class="swiper-button-prev"></div>
+        <div (click)='onNext()' class="swiper-button-next"></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Grid Section -->
