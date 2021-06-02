@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+// Interfaces
+import { Movie } from 'src/app/interfaces/now-playing-response';
+
 // Services
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -11,6 +14,9 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class SearchComponent implements OnInit {
 
+  public movies: Movie[] = [];
+  public text: string = '';
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private moviesService: MoviesService
@@ -18,10 +24,10 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
-      console.log( params.text );
-      //TODO: call service
+      this.text = params.text
+
       this.moviesService.searchMovies( params.text ).subscribe( movies => {
-        console.log( movies );
+        this.movies = movies;
       })
     })
   }

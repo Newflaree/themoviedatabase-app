@@ -3,7 +3,7 @@
   <div class='container'>
 
     <div class='row'>
-      <div class='section-title'>
+      <div class='section-title mb-5'>
         <h2>Las últimas <span>películas</span></h2>
       </div>
     </div>
@@ -11,30 +11,29 @@
     <div class='row'>
       <!-- Grid Item -->
       <div class='grid-item' *ngFor="let movie of movies">
-        <a href='#'>
-          <div class='grid-img'>
-            <img [src]='movie.poster_path | poster' 
-                 alt='grid-img'>
-          </div>
-          <div class='grid-info'>
-            <h3>{{ movie.title }}</h3>
-            <div class='row content-between'>
-              <div>
-                <star-rating [value]="movie.vote_average"
-                             [totalstars]=10
-                             checkedcolor="yellow"
-                             uncheckedcolor="gray"
-                             size="16px"
-                             [readonly]=false>
+        <div class='grid-img'>
+          <img [src]='movie.poster_path | poster' 
+               alt='grid-img'
+               (click)="onMovie( movie )">
+        </div>
+        <div class='grid-info'>
+          <h3>{{ movie.title }}</h3>
+          <div class='row content-between'>
+            <div>
+              <star-rating [value]="movie.vote_average"
+                           [totalstars]=10
+                           checkedcolor="yellow"
+                           uncheckedcolor="gray"
+                           size="16px"
+                           [readonly]=false>
 
-                </star-rating>
-              </div>
-              <div class='rate'>
-                {{ movie.vote_average | number:'1.1-2' }}
-              </div>
+              </star-rating>
+            </div>
+            <div class='rate'>
+              {{ movie.vote_average | number:'1.1-2' }}
             </div>
           </div>
-        </a>
+        </div>
       </div>
       <!-- Grid Item -->
     </div>

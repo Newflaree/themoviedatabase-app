@@ -1,1 +1,17 @@
-<p>search works!</p>
+<!-- Grid Section -->
+<section class='grid-section sec-padding mt-5' id='grid-sec'>
+  <div class='container'>
+
+    <div class='row'>
+      <div class='section-second-title mb-5'>
+        <h2>Resultados para la película <span>{{ text }}</span></h2>
+      </div>
+    </div>
+
+    <div class='row'>
+      <app-movies-poster-grid [movies]="movies"></app-movies-poster-grid>
+    </div>
+
+  </div>
+</section>
+<!-- Grid Section -->
