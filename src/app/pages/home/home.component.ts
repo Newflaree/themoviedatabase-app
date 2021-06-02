@@ -21,18 +21,18 @@ export class HomeComponent implements OnInit {
     const max = ( document.documentElement.scrollHeight || document.body.scrollHeight );
 
     if ( pos > max ) { 
-      if ( this.movieServeice.loading ) { return; }
+      if ( this.moviesService.loading ) { return; }
 
-      this.movieServeice.getMovies().subscribe( movies => {
+      this.moviesService.getMovies().subscribe( movies => {
         this.movies.push( ...movies );
       })
     }
   }
 
-  constructor( private movieServeice: MoviesService ) { }
+  constructor( private moviesService: MoviesService ) { }
 
   ngOnInit(): void {
-    this.movieServeice.getMovies()
+    this.moviesService.getMovies()
     .subscribe( movies => {
       this.movies = movies;
       this.moviesSlideshow = movies;

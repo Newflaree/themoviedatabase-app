@@ -13,7 +13,8 @@
       <div class='grid-item' *ngFor="let movie of movies">
         <a href='#'>
           <div class='grid-img'>
-            <img src='http://image.tmdb.org/t/p/w500{{ movie.poster_path }}' alt='grid-img'>
+            <img [src]='movie.poster_path | poster' 
+                 alt='grid-img'>
           </div>
           <div class='grid-info'>
             <h3>{{ movie.title }}</h3>

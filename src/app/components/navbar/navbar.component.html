@@ -15,8 +15,13 @@
 
       <nav>
         <div class='searcher'>
-          <input type="search" placeholder="Buscar película">
-          <button class='btn btn-1' type="submit">
+          <input #searchTxt 
+                 (keyup.enter)="searchMovie( searchTxt.value )"
+                 type="search" 
+                 placeholder="Buscar película">
+          <button class='btn btn-1' 
+                  (click)="searchMovie( searchTxt.value )"
+                  type="submit">
             Buscar
           </button>
         </div>

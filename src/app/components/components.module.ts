@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 // Ratting
 import { RatingModule } from 'ng-starrating';
               
+// Modules
+import { PipesModule } from '../pipes/pipes.module';
 
 // Components
 import { NavbarComponent } from './navbar/navbar.component';
@@ -22,7 +24,8 @@ import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-gr
   imports: [
     CommonModule,
     RouterModule,
-    RatingModule
+    RatingModule,
+    PipesModule
   ],
   exports: [
     NavbarComponent,
