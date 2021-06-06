@@ -1,1 +1,35 @@
-<p>movie works!</p>
+<!-- Grid Section -->
+<section class='grid-section sec-padding mt-5' id='grid-sec'>
+  <div class='container'>
+
+    <div class='row' *ngIf="movie">
+      <div class='section-title mb-5'>
+        <h2>{{ movie.title }}</h2>
+      </div>
+    </div>
+
+    <div class='row content-between' *ngIf="movie">
+      <div class='movie-img'>
+        <img [src]='movie.poster_path | poster' alt=''>
+      </div>
+      <div class='movie-details'>
+        <h3>Descripción:</h3>
+        <p> {{ movie.overview }}</p>
+          <star-rating [value]="movie.vote_average"
+                       [totalstars]=10
+                       checkedcolor="yellow"
+                       uncheckedcolor="gray"
+                       size="16px"
+                       [readonly]=false>
+
+          </star-rating>
+      </div>
+    </div>
+
+    <div class='row'>
+      Cast
+    </div>
+
+  </div>
+</section>
+<!-- Grid Section -->

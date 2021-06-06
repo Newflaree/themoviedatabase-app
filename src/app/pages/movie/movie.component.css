@@ -1,0 +1,26 @@
+.movie-img img {
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.movie-details {
+  max-width: 50%;
+}
+
+.movie-details h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #f2f0ef;
+  margin-bottom: 15px;
+}
+
+.movie-details p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba( 255, 255, 255, 0.8 );
+  margin-bottom: 40px;
+}
+
+
+
+

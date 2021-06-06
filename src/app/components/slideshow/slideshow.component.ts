@@ -17,20 +17,17 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
 
   constructor() { 
     this.swiper = new Swiper( '.swiper-container', {
-      // Optional parameters
       loop: true,
     });
   }
 
   ngAfterViewInit():void {
     this.swiper = new Swiper( '.swiper-container', {
-      // Optional parameters
       loop: true,
     });
   }
 
   ngOnInit(): void {
-    console.log( this.movies );
   }
 
   onPrev() {

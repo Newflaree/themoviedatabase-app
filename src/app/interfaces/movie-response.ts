@@ -33,7 +33,7 @@ export interface Genre {
 
 export interface ProductionCompany {
     id:             number;
-    logo_path:      string;
+    logo_path:      null | string;
     name:           string;
     origin_country: string;
 }
@@ -48,3 +48,4 @@ export interface SpokenLanguage {
     iso_639_1:    string;
     name:         string;
 }
+
