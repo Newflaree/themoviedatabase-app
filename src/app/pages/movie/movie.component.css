@@ -19,7 +19,7 @@
   font-weight: 400;
   color: rgba( 255, 255, 255, 0.8 );
   margin-bottom: 14px;
-}
+}  
 
 .movie-details p span {
   color: #f2f0ef;
@@ -30,3 +30,29 @@
 .star-rating {
   margin-bottom: 14px;
 }
+
+
+/* Responsive */
+@media( max-width: 991px ) {
+  .start-rating,
+  .movie-details,
+  .movie-img {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 100%;
+  }
+}
+
+
+@media( max-width: 767px ) {
+
+}
+
+@media( max-width: 575px ) {
+}
+/* Responsive */
+
+
+
+

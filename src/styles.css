@@ -296,7 +296,7 @@ header nav .searcher input {
 header nav .searcher input {
   background-color: var( --white-900 );
   font-size: 16px;
-  width: 400px;
+  width: 330px;
   padding: 10px 0;
   text-align: center;
   border-radius: 25px;
@@ -345,4 +345,59 @@ header nav .searcher input {
   margin: 10px 0 0;
 }
 /* Grid Section */
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/* Responsive */
+@media( max-width: 991px ) {
+  .container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  header nav {
+    width: 100%;
+    position: absolute;
+    background-color: var( --dark-700 );
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  header #nav-check:checked ~ nav  {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header .nav-toggler {
+    margin-right: 40px;
+    display: flex;
+  }
+
+  header nav .searcher button {
+    margin-top: 10px;
+    width: 330px;
+    align-items: center;
+  }
+
+  .grid-item {
+    width: calc( 50% - 30px );
+  }
+}
+
+@media( max-width: 767px ) {
+
+}
+
+@media( max-width: 575px ) {
+  .grid-item {
+    width: calc( 100% - 30px );
+  }
+}
+/* Responsive */
+
 
