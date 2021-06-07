@@ -9,6 +9,7 @@ import { Cast } from 'src/app/interfaces/credits-response';
 
 // Services
 import { MoviesService } from 'src/app/services/movies.service';
+import {combineLatest} from 'rxjs';
 
 @Component({
   selector: 'app-movie',
@@ -30,16 +31,16 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     const { id } = this.activatedRoute.snapshot.params;
 
-    this.moviesService.getMovieDetails( id ).subscribe( ( movie: any ) => {
+    combineLatest([
+      this.moviesService.getMovieDetails( id ),
+      this.moviesService.getCast( id ) 
+    ]).subscribe( ( [ movie, cast ] ) => {
       if ( !movie ) {
         this.router.navigateByUrl( '/home' );
         return;
       }
 
-      this.movie = movie
-    });
-
-    this.moviesService.getCast( id ).subscribe( cast => {
+      this.movie = movie;
       this.cast = cast.filter( actor => actor.profile_path != null );
     });
   }
