@@ -1,0 +1,17 @@
+img {
+  display: block;
+  border-radius: 8px;
+}
+
+.actor-name {
+  margin-top: 10px;
+  text-align: center;
+  color: #f2f0ef;
+  font-size: 18px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f2f0ef;
+}
+

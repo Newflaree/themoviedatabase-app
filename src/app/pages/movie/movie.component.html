@@ -1,4 +1,3 @@
-<!-- Grid Section -->
 <section class='grid-section sec-padding mt-5' id='grid-sec'>
   <div class='container'>
 
@@ -10,26 +9,38 @@
 
     <div class='row content-between' *ngIf="movie">
       <div class='movie-img'>
-        <img [src]='movie.poster_path | poster' alt=''>
+        <img [src]='movie.poster_path | poster' [alt]="movie.title">
       </div>
       <div class='movie-details'>
         <h3>Descripción:</h3>
         <p> {{ movie.overview }}</p>
-          <star-rating [value]="movie.vote_average"
-                       [totalstars]=10
-                       checkedcolor="yellow"
-                       uncheckedcolor="gray"
-                       size="16px"
-                       [readonly]=false>
 
-          </star-rating>
+        <star-rating [value]="movie.vote_average"
+                     class='start-rating'
+                     [totalstars]=10
+                     checkedcolor="yellow"
+                     uncheckedcolor="gray"
+                     size="16px"
+                     [readonly]=false>
+
+        </star-rating>
+
+        <p><span>Genero:</span>{{ movie.genres[0].name }}</p>
+        <p><span>Lanzamiento:</span>{{ movie.release_date }}</p>
+        <p><span>Pais de origen:</span>{{ movie.production_countries[0].name }}</p>
+
+        <button class='btn btn-2 mt-5'
+              (click)="onBack()">
+          Regresar
+        </button>
       </div>
     </div>
 
-    <div class='row'>
-      Cast
+
+
+    <div class='row' *ngIf="cast.length > 0">
+      <app-cast-slideshow [cast]="cast"></app-cast-slideshow>
     </div>
 
   </div>
 </section>
-<!-- Grid Section -->

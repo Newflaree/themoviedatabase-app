@@ -109,6 +109,17 @@ img {
   color: var( --main-color );
 }
 
+.btn-2 {
+  background-color: var( --color-1 );
+  color: var( --white-900 );
+}
+
+.btn-2:hover {
+  background-color: transparent;
+  border-color: var( --color-1 );
+  color: var( --color-1 );
+}
+
 .sec-padding {
   padding: 80px 0;
 }

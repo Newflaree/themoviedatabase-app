@@ -12,6 +12,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-grid.component';
+import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.component';
 
 
 
@@ -19,7 +20,8 @@ import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-gr
   declarations: [
     NavbarComponent,
     SlideshowComponent,
-    MoviesPosterGridComponent
+    MoviesPosterGridComponent,
+    CastSlideshowComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { MoviesPosterGridComponent } from './movies-poster-grid/movies-poster-gr
   exports: [
     NavbarComponent,
     SlideshowComponent,
-    MoviesPosterGridComponent
+    MoviesPosterGridComponent,
+    CastSlideshowComponent
   ]
 })
 export class ComponentsModule { }
