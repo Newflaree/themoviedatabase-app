@@ -387,6 +387,8 @@ header nav .searcher input {
   .grid-item {
     width: calc( 50% - 30px );
   }
+
+
 }
 
 @media( max-width: 767px ) {
