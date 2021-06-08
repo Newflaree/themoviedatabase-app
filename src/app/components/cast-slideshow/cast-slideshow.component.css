@@ -31,7 +31,7 @@ img {
 @media( max-width: 767px ) {
   .swiper-wrapper {
     width: 100%;
-    max-width: 350px
+    max-width: 345px
   }
 }
 

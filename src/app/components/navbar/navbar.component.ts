@@ -14,6 +14,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navTogg() {
+  }
+
   searchMovie( text: string ) {
     text = text.trim();
 
