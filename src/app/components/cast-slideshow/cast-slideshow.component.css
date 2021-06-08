@@ -10,8 +10,33 @@ img {
   font-size: 18px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #f2f0ef;
+.swiper-wrapper {
+  width: 100%;
 }
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media( max-width: 991px ) {
+  .swiper-wrapper {
+    width: 100%;
+    max-width: 330px;
+  }
+}
+
+
+@media( max-width: 767px ) {
+  .swiper-wrapper {
+    width: 100%;
+    max-width: 350px
+  }
+}
+
+@media( max-width: 575px ) {
+}
+/* Responsive */
+
 
