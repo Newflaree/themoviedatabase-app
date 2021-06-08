@@ -363,6 +363,7 @@ header nav .searcher input {
     background-color: var( --dark-700 );
     top: 100%;
     left: 0;
+    margin-right: 30px;
     padding: 10px;
     visibility: hidden;
     opacity: 0;
@@ -374,18 +375,22 @@ header nav .searcher input {
   }
 
   header .nav-toggler {
-    margin-right: 40px;
     display: flex;
+  }
+
+  header nav .searcher input {
+    width: calc( 100% - 35px );
+    align-items: center;
   }
 
   header nav .searcher button {
     margin-top: 10px;
-    width: 330px;
+    width: calc( 100% - 35px );
     align-items: center;
   }
 
   .grid-item {
-    width: calc( 50% - 30px );
+    width: calc( 50% - 35px );
   }
 
 
